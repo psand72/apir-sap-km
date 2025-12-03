@@ -1,0 +1,117 @@
+site_name: Base de Connaissances SAP
+site_description: Capitalisation SAP - Datasphere, BW, S/4HANA
+site_author: André
+
+# Repository (à configurer plus tard avec votre repo Git si vous le souhaitez)
+# repo_url: https://github.com/votre-username/apir-sap-km
+# repo_name: apir-sap-km
+
+theme:
+  name: material
+  language: fr
+  palette:
+    # Mode clair
+    - scheme: default
+      primary: light blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    # Mode sombre
+    - scheme: slate
+      primary: light blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
+  
+  features:
+    - navigation.tabs           # Onglets de navigation
+    - navigation.sections       # Sections dans la barre latérale
+    - navigation.expand         # Développer automatiquement les sections
+    - navigation.top            # Bouton retour en haut
+    - search.suggest            # Suggestions de recherche
+    - search.highlight          # Surligner les résultats
+    - content.code.copy         # Bouton copier pour le code
+    - content.tabs.link         # Liens entre onglets de code
+
+# Extensions Markdown
+markdown_extensions:
+  - pymdownx.highlight:         # Coloration syntaxique
+      anchor_linenums: true
+  - pymdownx.superfences:       # Blocs de code avancés
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:            # Onglets de contenu
+      alternate_style: true
+  - pymdownx.tasklist:          # Listes de tâches
+      custom_checkbox: true
+  - admonition                  # Boîtes d'avertissement/info
+  - pymdownx.details            # Détails repliables
+  - tables                      # Tableaux
+  - attr_list                   # Attributs sur éléments
+  - md_in_html                  # Markdown dans HTML
+  - footnotes                   # Notes de bas de page
+  - toc:                        # Table des matières
+      permalink: true
+
+# Plugins
+plugins:
+  - search:
+      lang: fr
+
+# Navigation
+nav:
+  - Accueil: index.md
+  
+  - SAP Datasphere:
+    - datasphere/index.md
+    - Architecture: datasphere/architecture.md
+    - Modèles Analytiques: datasphere/modeles-analytiques.md
+    - Dataflows: datasphere/dataflows.md
+    - CDS Views: datasphere/cds-views.md
+    - Bonnes Pratiques: datasphere/best-practices.md
+  
+  - SAP BW:
+    - bw/index.md
+    - Structures de Données: bw/structures-donnees.md
+    - Transformations: bw/transformations.md
+    - Process Chains: bw/process-chains.md
+    - Migration vers Datasphere: bw/migration-datasphere.md
+  
+  - SAP S/4HANA:
+    - s4hana/index.md
+    - Modules:
+      - MM (Materials Management): s4hana/modules/mm.md
+      - PP (Production Planning): s4hana/modules/pp.md
+      - SD (Sales & Distribution): s4hana/modules/sd.md
+      - COPA (Profitability Analysis): s4hana/modules/copa.md
+    - Tables Clés: s4hana/tables-cles.md
+    - Extractions: s4hana/extractions.md
+  
+  - SQL & Transformations:
+    - sql/index.md
+    - Patterns Courants: sql/patterns.md
+    - ABAP vers SQL: sql/abap-to-sql.md
+    - Optimisation: sql/optimisation.md
+    - Exemples: sql/exemples.md
+  
+  - Projets:
+    - projets/index.md
+    - BAREGLASS: projets/bareglass.md
+    - Templates: projets/templates.md
+  
+  - Références:
+    - references/index.md
+    - Cheat Sheet Markdown: references/mkdocs-material-cheatsheet.md
+    - Glossaire: references/glossaire.md
+    - Liens Utiles: references/liens.md
+    - Changelog: references/changelog.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/votre-username
