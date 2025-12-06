@@ -3,7 +3,7 @@ site_description: Capitalisation SAP - Datasphere, BW, S/4HANA
 site_author: André
 
 # Repository (à configurer plus tard avec votre repo Git si vous le souhaitez)
-# repo_url: https://github.com/votre-username/apir-sap-km
+# repo_url: https://github.com/psand72/apir-sap-km
 # repo_name: apir-sap-km
 
 theme:
