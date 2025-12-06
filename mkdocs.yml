@@ -27,7 +27,7 @@ theme:
   
   features:
     - navigation.tabs           # Onglets de navigation
-    - navigation.tabs.sticky	# Menu Fixe
+    - navigation.tabs.sticky    # Menu Fixe
     - navigation.sections       # Sections dans la barre latérale
     - navigation.expand         # Développer automatiquement les sections
     - navigation.top            # Bouton retour en haut
