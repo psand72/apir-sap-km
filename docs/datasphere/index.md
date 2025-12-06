@@ -4,18 +4,19 @@
 
 SAP Datasphere est la solution de data warehousing moderne de SAP, combinant les capacités de :
 
-- SAP Data Warehouse Cloud
+- SAP DataSphere 
 - SAP BW Bridge (pour migration BW)
 - Intégration native S/4HANA
 
 ## Architecture
 ```mermaid
 graph LR
-    A[S/4HANA] -->|CDS Views| B[Datasphere]
+    A[S/4HANA] -->|CDS Views - Replication Flow| B[Datasphere]
     C[BW] -->|Migration| B
     D[Systèmes Externes] -->|Dataflows| B
-    B --> E[Modèles Analytiques]
-    E --> F[SAC / Analytics]
+    B --> E[FACT Modeling]
+    E --> F[Modèles Analytiques]
+    F --> G[SAC / Analytics]
 ```
 
 ## Composants Clés
@@ -31,9 +32,9 @@ Environnements isolés pour organiser les données par projet ou département.
 ### 3. Couches de Données
 
 !!! info "Architecture en couches"
-    - **Raw Layer** : Données sources brutes
-    - **Harmonization Layer** : Données nettoyées et standardisées
-    - **Semantic Layer** : Modèles analytiques business
+    - **Bronze Layer** : Données sources brutes
+    - **Silver Layer** : Données nettoyées et standardisées
+    - **Semantic/Gold Layer** : Modèles analytiques business
 
 ### 4. Modèles Analytiques
 - Analytical Datasets
